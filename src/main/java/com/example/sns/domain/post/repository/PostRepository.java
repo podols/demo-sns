@@ -248,8 +248,8 @@ public class PostRepository {
     }
     public void bulkInsert(List<Post> posts) {
         var sql = String.format("""
-                INSERT INTO `%s` (memberId, contents, createdDate, createdAt)
-                VALUES (:memberId, :contents, :createdDate, :createdAt)
+                INSERT INTO `%s` (memberId, contents, createdDate, createdAt, likeCount)
+                VALUES (:memberId, :contents, :createdDate, :createdAt, :likeCount)
                 """, TABLE);
 
         SqlParameterSource[] params = posts

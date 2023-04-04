@@ -49,7 +49,7 @@ public class PostFixtureFactory {
         return new EasyRandomParameters()
                 .excludeField(named("id"))
                 .stringLengthRange(1, 100)
-                .randomize(Long.class, new LongRangeRandomizer(1L, 100000L));
+                .randomize(Long.class, new LongRangeRandomizer(1L, 1000L));
     }
 
     private static Predicate<Field> memberId() {
